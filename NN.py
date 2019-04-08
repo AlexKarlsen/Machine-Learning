@@ -43,13 +43,13 @@ model.compile(optimizer="adam",
               
 model.summary()
 
-checkpoint = ModelCheckpoint("Checkpoints/fc_checkpoint.h5", monitor='val_acc', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
+checkpoint = ModelCheckpoint("checkpoints/fc_checkpoint.h5", monitor='val_acc', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
 early = EarlyStopping(monitor='val_acc', min_delta=0, patience=10, verbose=1, mode='auto')
 tb_path = os.path.join('tensorboard')
 tensorboard = TensorBoard(log_dir=tb_path, histogram_freq=0, write_graph=True, write_images=True, write_grads=True)
 lrate = LearningRateScheduler(step_decay)
 
-callbacks = [ModelCheckpoint, early, tensorboard, lrate ]
+callbacks = [checkpoint, early, tensorboard, lrate ]
 
 history = model.fit(x_train, y_train, epochs=5, validation_data=(x_validation, y_validation), callbacks=callbacks, batch_size=32)
 

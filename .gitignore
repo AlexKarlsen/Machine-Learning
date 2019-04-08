@@ -130,7 +130,7 @@ dmypy.json
 # End of https://www.gitignore.io/api/python
 
 # exclude everything
-src/models/*
+Data/*
 
 # exception to the rule
-!src/models/.gitkeep 
+!Data/.gitkeep 

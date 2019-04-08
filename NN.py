@@ -1,4 +1,5 @@
 import os
+import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,7 +8,7 @@ from load_data import loadVectors
 import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
 config = tf.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.5
+config.gpu_options.per_process_gpu_memory_fraction = .05
 config.gpu_options.allow_growth=True
 set_session(tf.Session(config=config))
 from keras import Sequential, utils, layers, regularizers

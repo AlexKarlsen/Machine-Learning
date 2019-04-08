@@ -6,25 +6,26 @@ from load_data import loadVectors
 import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
 config = tf.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.05
+config.gpu_options.per_process_gpu_memory_fraction = 0.5
 config.gpu_options.allow_growth=True
 set_session(tf.Session(config=config))
-from tensorflow import keras
+from keras import Sequential, utils, layers
+from keras.callbacks import ModelCheckpoint, LearningRateScheduler, TensorBoard, EarlyStopping
 
 x_train, y_train, x_validation, y_validation, x_test = loadVectors()
 
 y_train = y_train - 1
 y_validation = y_validation - 1;
 
-y_train = keras.utils.to_categorical(y_train)
-y_validation = keras.utils.to_categorical(y_validation)
+y_train = utils.to_categorical(y_train)
+y_validation = utils.to_categorical(y_validation)
 
-model = keras.Sequential([
-    keras.layers.Dense(4096, activation='relu', kernel_regularizer=keras.regularizers.l2(0.02), input_shape=(4096,)),
-    keras.layers.Dropout(0.2),
-    keras.layers.Dense(32, activation='relu', kernel_regularizer=keras.regularizers.l2(0.004)),
-    keras.layers.Dropout(0.2),
-    keras.layers.Dense(29, activation='softmax')
+model = Sequential([
+    layers.Dense(4096, activation='relu', kernel_regularizer=keras.regularizers.l2(0.02), input_shape=(4096,)),
+    layers.Dropout(0.2),
+    layers.Dense(32, activation='relu', kernel_regularizer=keras.regularizers.l2(0.004)),
+    layers.Dropout(0.2),
+    layers.Dense(29, activation='softmax')
 ])
 
 model.compile(optimizer="adam", 
@@ -32,6 +33,12 @@ model.compile(optimizer="adam",
               metrics=['acc'])
               
 model.summary()
+
+checkpoint = ModelCheckpoint("Checkpoints/fc_checkpoint.h5", monitor='val_acc', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
+early = EarlyStopping(monitor='val_acc', min_delta=0, patience=10, verbose=1, mode='auto')
+tb_path = os.path.join('tensorboard,'Graph')
+tensorboard = TensorBoard(log_dir=tb_path, histogram_freq=0, write_graph=True, write_images=True, write_grads=True)
+
 
 history = model.fit(x_train, y_train, epochs=5, validation_data=(x_validation, y_validation))
 

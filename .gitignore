@@ -131,6 +131,10 @@ dmypy.json
 
 # exclude everything
 Data/*
+checkpoints/*
+tensorboard/*
 
 # exception to the rule
-!Data/.gitkeep 
+!Data/.gitkeep
+!checkpoints/.gitkeep
+!tensorboard/.gitkeep 

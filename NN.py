@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,7 +10,7 @@ config = tf.ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.5
 config.gpu_options.allow_growth=True
 set_session(tf.Session(config=config))
-from keras import Sequential, utils, layers
+from keras import Sequential, utils, layers, regularizers
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler, TensorBoard, EarlyStopping
 
 x_train, y_train, x_validation, y_validation, x_test = loadVectors()
@@ -21,9 +22,9 @@ y_train = utils.to_categorical(y_train)
 y_validation = utils.to_categorical(y_validation)
 
 model = Sequential([
-    layers.Dense(4096, activation='relu', kernel_regularizer=keras.regularizers.l2(0.02), input_shape=(4096,)),
+    layers.Dense(4096, activation='relu', kernel_regularizer=regularizers.l2(0.02), input_shape=(4096,)),
     layers.Dropout(0.2),
-    layers.Dense(32, activation='relu', kernel_regularizer=keras.regularizers.l2(0.004)),
+    layers.Dense(32, activation='relu', kernel_regularizer=regularizers.l2(0.004)),
     layers.Dropout(0.2),
     layers.Dense(29, activation='softmax')
 ])
@@ -36,7 +37,7 @@ model.summary()
 
 checkpoint = ModelCheckpoint("Checkpoints/fc_checkpoint.h5", monitor='val_acc', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
 early = EarlyStopping(monitor='val_acc', min_delta=0, patience=10, verbose=1, mode='auto')
-tb_path = os.path.join('tensorboard,'Graph')
+tb_path = os.path.join('tensorboard')
 tensorboard = TensorBoard(log_dir=tb_path, histogram_freq=0, write_graph=True, write_images=True, write_grads=True)
 
 

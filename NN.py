@@ -13,6 +13,14 @@ set_session(tf.Session(config=config))
 from keras import Sequential, utils, layers, regularizers
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler, TensorBoard, EarlyStopping
 
+# learning rate schedule
+def step_decay(epoch):
+	initial_lrate = 0.1
+	drop = 0.5
+	epochs_drop = 10.0
+	lrate = initial_lrate * math.pow(drop, math.floor((1+epoch)/epochs_drop))
+	return lrate
+
 x_train, y_train, x_validation, y_validation, x_test = loadVectors()
 
 y_train = y_train - 1
@@ -39,9 +47,11 @@ checkpoint = ModelCheckpoint("Checkpoints/fc_checkpoint.h5", monitor='val_acc', 
 early = EarlyStopping(monitor='val_acc', min_delta=0, patience=10, verbose=1, mode='auto')
 tb_path = os.path.join('tensorboard')
 tensorboard = TensorBoard(log_dir=tb_path, histogram_freq=0, write_graph=True, write_images=True, write_grads=True)
+lrate = LearningRateScheduler(step_decay)
 
+callbacks = [ModelCheckpoint, early, tensorboard, lrate ]
 
-history = model.fit(x_train, y_train, epochs=5, validation_data=(x_validation, y_validation))
+history = model.fit(x_train, y_train, epochs=5, validation_data=(x_validation, y_validation), callbacks=callbacks, batch_size=32)
 
 acc = history.history['acc']
 val_acc = history.history['val_acc']

@@ -1,5 +1,4 @@
 import os
-import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -8,19 +7,11 @@ from load_data import loadVectors
 import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
 config = tf.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = .05
+config.gpu_options.per_process_gpu_memory_fraction = .5
 config.gpu_options.allow_growth=True
 set_session(tf.Session(config=config))
-from keras import Sequential, utils, layers, regularizers
-from keras.callbacks import ModelCheckpoint, LearningRateScheduler, TensorBoard, EarlyStopping
-
-# learning rate schedule
-def step_decay(epoch):
-	initial_lrate = 0.1
-	drop = 0.5
-	epochs_drop = 10.0
-	lrate = initial_lrate * math.pow(drop, math.floor((1+epoch)/epochs_drop))
-	return lrate
+from keras import Sequential, utils, layers, regularizers, optimizers
+from keras.callbacks import ModelCheckpoint, LearningRateScheduler, TensorBoard, EarlyStopping, ReduceLROnPlateau
 
 x_train, y_train, x_validation, y_validation, x_test = loadVectors()
 
@@ -31,14 +22,14 @@ y_train = utils.to_categorical(y_train)
 y_validation = utils.to_categorical(y_validation)
 
 model = Sequential([
-    layers.Dense(4096, activation='relu', kernel_regularizer=regularizers.l2(0.02), input_shape=(4096,)),
-    layers.Dropout(0.2),
-    layers.Dense(32, activation='relu', kernel_regularizer=regularizers.l2(0.004)),
-    layers.Dropout(0.2),
+    layers.Dense(4096, activation='relu', kernel_regularizer=regularizers.l2(0.04), input_shape=(4096,)),
+    layers.Dropout(0.5),
+    layers.Dense(28, activation='relu', kernel_regularizer=regularizers.l2(0.02)),
+    layers.Dropout(0.4),
     layers.Dense(29, activation='softmax')
 ])
 
-model.compile(optimizer="adam", 
+model.compile(optimizer=optimizers.Adam(lr=0.0001), 
               loss='categorical_crossentropy', 
               metrics=['acc'])
               
@@ -46,13 +37,13 @@ model.summary()
 
 checkpoint = ModelCheckpoint("checkpoints/fc_checkpoint.h5", monitor='val_acc', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
 early = EarlyStopping(monitor='val_acc', min_delta=0, patience=10, verbose=1, mode='auto')
-tb_path = os.path.join('tensorboard')
-tensorboard = TensorBoard(log_dir=tb_path, histogram_freq=0, write_graph=True, write_images=True, write_grads=True)
-lrate = LearningRateScheduler(step_decay)
+#tb_path = os.path.join('tensorboard')
+#tensorboard = TensorBoard(log_dir=tb_path, histogram_freq=0, write_graph=True, write_images=True, write_grads=True)
+reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=5, min_lr=0.000001, verbose=1)
 
-callbacks = [checkpoint, early, tensorboard, lrate ]
+callbacks = [checkpoint, early, reduce_lr ]
 
-history = model.fit(x_train, y_train, epochs=5, validation_data=(x_validation, y_validation), callbacks=callbacks, batch_size=32)
+history = model.fit(x_train, y_train, epochs=5, validation_data=(x_validation, y_validation), callbacks=callbacks, batch_size=32, verbose=2)
 
 acc = history.history['acc']
 val_acc = history.history['val_acc']

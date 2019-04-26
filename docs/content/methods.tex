@@ -1,0 +1,43 @@
+Several experiments on this supervised learning challenge have been conducted using a variety of different techniques for classification are beformed on the two encoded datasets; FIN-Benthic and FIN-Benthic-concatenated. The classification methods are; k-Nearest Neighbors (kNN), Linear Disriminant Analysis (LDA), Support Vector Machines (SVM), Perceptron and Neural Networks (NN). Cross Validation (CV) are use for model selection to evaluate the best performing model. All the methods have been applied to the datasets on full dimensions, additionally they have been applied with dimensionality reduction as a preprocessing step in the classification pipeline. Grid search have been used to search for good hyperparameters for all classifiers and dimensionality reduction techniques. Lastly existing Convolutional Neural Network architectures have been used on the raw images and using the promise of transfer learning to use a pretrained model to gain faster and better performance on a small dataset. For the transfer learning task the existing train, validation and test split have been used.
+
+\paragraph{k-Nearest Neighbors (kNN)}
+
+K-Nearest Neighbor is a distance-based classifier and as the name implies classifies to the most common occuring class of the k-nearest neighbors. There exist a variety of distance metrics, some example are; euclidean, minikowski, manhanobli and manhattan distance. 
+
+\paragraph{Linear Discrmininat Analysis (LDA)}
+
+Linear Discrmininat Analysis is a linear transformation of the data. The linear transformation is an optimization, that tries to maximize the distance between classes and minimize the distance within a class\todo{elaborate}. The classifier can also be used for dimensionality reduction, as one must specify the n number of components i.e. dimensions to transform the data onto, if the number of dimensions are less than the original data, than the dimensionality is reduced. 
+
+\paragraph{Support Vector Machine (SVM)}
+
+\paragraph{Perceptron}
+
+\paragraph{Neural Network (NN)}
+
+\paragraph{Convolutional Neural Network (CNN)}
+
+\paragraph{Dimensionality Reduction}
+
+\paragraph{Principal Component Analysis (PCA)}
+
+\paragraph{Model Selection}
+
+Model selection are procedures to train the best model and avoid overfitting the model to the training data. Overfitting is the pitfall of having a model, that desribes the training data too well, thus suffers to not generalising the true underlying structure of the data. Although other methods exists the two used in the paper are Validation Holdout and Cross Validation. 
+
+\subparagraph{Validation Holdout}
+
+Validation Holdout takes a fraction of your available labelled data and hold it out of the training procedure. The validation subset is then used to validate the model's performance on data it has not been training. The assumption is, that the holdout set resembles the true data, and if the model performs well on both training and validation it is assumed to be a good model. The split is typically made 70\/30 for training data and validation data respectively. 
+
+\subparagraph{Cross Validation (CV)}
+
+Cross Validation extends on the holdout validation. The entire data set are split in $k$ folds, for every $k$ step one subset is for validation and the remaining $k-1$ fold are used for training. Figure illustrates the idea. 
+
+The ensures that the model have been trained on all the data and validated as well. The selection of $k$ are typically either $5$ or $10$. 
+
+\paragraph{Hyperparameter Search}
+
+There are mainly two approaches to search for hyperparameters; Random Search and Grid Search other than heuristic guessing. In this paper Grid Search are used.
+
+\subparagraph{Grid Search}
+
+Grid Search is an approach to seek better hyperparameters for your model. You specify a set of options for all hyperparameters and then seacrh all possible combination in the grid. The down-side of this approch is, that it is still based on intuition of good hyperparameters, however it allows you to explore a broader space of setting at the cost of additional time. Nonetheless one combination, that was not considered might turn out to be the best one. The random approach are also widely used and might be preffered, as it may find a sweet spot, that goes beyond human intuition, however that is no guarantee and it is still time costly.  

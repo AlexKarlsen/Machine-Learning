@@ -1,0 +1,121 @@
+This section presents the results of the investigation. First will the result from ORL be presented and secondly the results from MNIST.
+
+\subsection{ORL}
+    The five classifiers has been applied to the ORL data in both 1200 dimensions and in a reduced version in 2 dimensions. 
+
+    \subsection{Principal Component Analysis}
+\begin{figure}[H]
+    \includegraphics[width=0.5\textwidth]{../src/results/orl/test_data_pca_orl.png}
+    \caption{ORL data sets reduced to 2 dimension by PCA for plotting. The plot utilizes colors and sizes to separate the classes.}
+    \label{fig:pca_orl}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\textwidth]{../src/results/mnist/test_data_pca_mnist.png}
+    \caption{MNIST data sets reduced to 2 dimension by PCA for plotting. The plot utilizes colors and sizes to separate the classes.}
+    \label{fig:pca_mnist}
+\end{figure}
+    
+    Table \ref{tab:orl} presents the results from the high dimensional experiment, whereas table \ref{tab:orl_2d} presents the result of the reduced dimension experiment.
+    As one can see the tables presents the aforementioned metrics; error rate, training time and test time.
+    \begin{table}[H]
+        \small
+        \begin{tabulary}{\linewidth}{CCCC}
+        \toprule
+        \textbf{Classifier 1200D} & \textbf{Test Error [\%]} & \textbf{Training Time [s]} & \textbf{Test Time [s]}  \\
+        \midrule
+        Nearest Centroid  & 6.67 & 0.0052 & 0.0024  \\ \hline
+        Nearest Subclass Centroid \#2 & 6.67 & 1.2577 & 0.1097   \\ \hline
+        Nearest Subclass Centroid \#3 & 6.67 & 1.0044 & 0.1476   \\ \hline 
+        Nearest Subclass Centroid \#5 & 5.83 & 2.3308 & 0.2959   \\ \hline 
+        Nearest Neighbor & 5.00 & 0.0122 & 0.0735   \\ \hline 
+        Perceptron Back-Propagation & 10.83 & 53.6059 & 0.0274   \\ \hline 
+        Perceptron MSE & 55.83 & 0.1305 & 0.0014 \\ 
+        \bottomrule
+        \end{tabulary}
+        \caption{}
+        \label{tab:orl}
+        \end{table}
+
+        \begin{table}[H]
+            \small
+            \begin{tabulary}{\linewidth}{CCCC}
+        \toprule
+        \textbf{Classifier PCA 2D}& \textbf{Test Error [\%]} & \textbf{Training Time [s]} & \textbf{Test Time [s]}  \\
+        \midrule
+        Nearest Centroid  & 65.00 & 0.0038 & 0.0007  \\ \hline
+        Nearest Subclass Centroid \#2 &  62.50 & 1.0213 & 0.0711   \\ \hline
+        Nearest Subclass Centroid \#3 & 60.83 & 0.8745 & 0.1194   \\ \hline 
+        Nearest Subclass Centroid \#5 & 59.17 & 1.3919 & 0.2475   \\ \hline 
+        Nearest Neighbor & 60.83 & 0.0013 & 0.0033  \\ \hline 
+        Perceptron Back-Propagation & 62.50 & 4.9293 &  0.0031   \\ \hline 
+        Perceptron MSE & 90.00 & 0.0113 & 0.0003 \\ 
+        \bottomrule
+        \end{tabulary}
+        \caption{}
+        \label{tab:orl_2d}
+    \end{table}
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\textwidth]{../src/results/orl/algorithm_comparison.png}
+    \caption{Comparison of classification algorithms applied to the ORL data set with 1200 dimensions. The stacked bars show the training time (blue) and test time (red). The points show the error rate for each algorithm.}
+    \label{fig:comparison_orl_1200d}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\textwidth]{../src/results/orl/2d_algorithm_comparison.png}
+    \caption{Comparison of classification algorithms applied to the ORL data set reduced to 2 dimensions. The stacked bars show the training time (blue) and test time (red). The points show the error rate for each algorithm.}
+    \label{fig:comparison_orl_2d}
+\end{figure}
+
+\subsection{MNIST}
+
+\begin{table}[H]
+    \small
+    \begin{tabulary}{\linewidth}{CCCC}
+    \toprule
+    \textbf{Classifier 784D} & \textbf{Test Error [\%]} & \textbf{Training Time [s]} & \textbf{Test Time [s]}  \\
+    \midrule
+    Nearest Centroid  & 17.97 & 0.2382 & 0.03913  \\ \hline
+    Nearest Subclass Centroid \#2 & 13.91 & 19.5099 & 1.9473   \\ \hline
+    Nearest Subclass Centroid \#3 & 11.89 & 36.3477 & 3.4272   \\ \hline 
+    Nearest Subclass Centroid \#5 & 9.63 & 51.9478 & 4.3591   \\ \hline 
+    Nearest Neighbor & 3.09 & 54.3214 & 679.6184  \\ \hline 
+    Perceptron Back-Propagation & 3.04 & 952.6214 &  0.9667   \\ \hline 
+    Perceptron MSE & 14.09 & 3.8034 & 0.0846 \\ 
+    \bottomrule
+\end{tabulary}
+\caption{}
+    \label{tab:mnist}
+    \end{table}
+
+    \begin{table}[H]
+        \small
+        \begin{tabulary}{\linewidth}{CCCC}
+    \toprule
+    \textbf{Classifier PCA 2D}& \textbf{Test Error [\%]} & \textbf{Training Time [s]} & \textbf{Test Time [s]}  \\
+    \midrule
+    Nearest Centroid  & 84.58 & 0.0149 & 0.0036  \\ \hline
+    Nearest Subclass Centroid \#2 &  88.08 & 0.6983 & 1.5865   \\ \hline
+    Nearest Subclass Centroid \#3 & 88.89 & 1.2710 & 2.028   \\ \hline 
+    Nearest Subclass Centroid \#5 & 89.04 & 2.4318 & 3.29948   \\ \hline 
+    Nearest Neighbor & 89.29 & 0.0723 & 0.0232  \\ \hline 
+    Perceptron Back-Propagation & 91.09 & 458.7672 &  0.1883   \\ \hline 
+    Perceptron MSE & 78.62 & 0.6391 & 0.00245 \\ 
+    \bottomrule
+    \end{tabulary}
+    \caption{}
+    \label{tab:mnist_2d}
+\end{table}
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\textwidth]{../src/results/mnist/algorithm_comparison.png}
+    \caption{Comparison of classification algorithms applied to the MNIST data set with 784 dimensions. The stacked bars show the training time (blue) and test time (red). The points show the error rate for each algorithm.}
+    \label{fig:comparison_mnist_784d}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\textwidth]{../src/results/mnist/2d_algorithm_comparison.png}
+    \caption{Comparison of classification algorithms  applied to the MNIST data set reduced to 2 dimensions. The stacked bars show the training time (blue) and test time (red). The points show the error rate for each algorithm.}
+    \label{fig:comparison_mnist_2d}
+\end{figure}

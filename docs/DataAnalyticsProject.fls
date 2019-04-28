@@ -1,11 +1,11 @@
-PWD /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs
+PWD /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs
 INPUT /usr/local/texlive/2018/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.tex
-OUTPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.log
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/_tex/preamble.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/_tex/preamble.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.tex
+OUTPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.log
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/_tex/preamble.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/_tex/preamble.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
@@ -270,9 +270,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tabulary/tabulary.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tabulary/tabulary.sty
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.aux
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.aux
-OUTPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.aux
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.aux
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.aux
+OUTPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.aux
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1bch.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1bch.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8t.tfm
@@ -292,14 +292,14 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.out
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.out
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.out
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.out
-OUTPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.pdf
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.out
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.out
-OUTPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.out
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.out
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.out
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.out
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.out
+OUTPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.pdf
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.out
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.out
+OUTPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchb8t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8t.tfm
@@ -335,10 +335,24 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchrc8t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchb8t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchri8t.tfm
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/abstract.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/abstract.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/introduction.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/introduction.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/abstract.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/abstract.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/introduction.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/introduction.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/dataset.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/dataset.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/bugs.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/bugs.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/bugs.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchbi8t.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchb8t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchb8r.tfm
 INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -350,51 +364,67 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8r.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchr8t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchb8t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchb8r.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchri8t.vf
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchri8r.tfm
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/dataset.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/dataset.tex
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8t.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8t.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8t.tfm
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/figures/bugs.png
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/figures/bugs.png
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/figures/bugs.png
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchbi8t.tfm
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/methods.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/methods.tex
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchr8t.vf
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8r.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchbi8t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchbi8r.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchr8t.vf
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8r.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchr8t.vf
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchr8r.tfm
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/results.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/results.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/discussion.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/discussion.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/conclusion.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/conclusion.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.bbl
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.bbl
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchri8t.tfm
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/appendix.tex
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/content/appendix.tex
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchri8t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchri8r.tfm
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.aux
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.out
-INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/docs/DataAnalyticsProject.out
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/methods.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/methods.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/knn.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/knn.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/knn.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/lda_deci.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/lda_deci.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/lda_deci.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchri8t.tfm
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/svm.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/svm.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/svm.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/perceptron.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/perceptron.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/perceptron.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/nn.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/nn.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/nn.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/bitstrea/charter/bchri8t.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/bitstrea/charter/bchri8r.tfm
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/pca.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/pca.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/pca.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/lda.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/lda.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/lda.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/validationset.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/validationset.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/validationset.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/cv.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/cv.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/cv.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/gridsearch_vs_randomsearch.jpeg
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/gridsearch_vs_randomsearch.jpeg
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/gridsearch_vs_randomsearch.jpeg
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/results.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/results.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/fin-benthic-same.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/fin-benthic-same.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/figures/fin-benthic-same.png
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/discussion.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/discussion.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/conclusion.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/conclusion.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.bbl
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.bbl
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/appendix.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/content/appendix.tex
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.aux
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.out
+INPUT /Users/alexkarlsen/Courses/Computer Vision & Machine Learning/Machine Learning/Repo/docs/DataAnalyticsProject.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/bitstrea/charter/bchbi8a.pfb
@@ -402,6 +432,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

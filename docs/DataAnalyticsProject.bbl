@@ -31,6 +31,12 @@ K.~Meissner, ``Detect.'' [Online]. Available:
   \url{https://www.syke.fi/en-US/Research__Development/Research_and_development_projects/Projects/DETECT}
 \BIBentrySTDinterwordspacing
 
+\bibitem{finbenthic}
+\BIBentryALTinterwordspacing
+------, ``Fin-benthic.'' [Online]. Available:
+  \url{https://etsin.avointiede.fi/dataset/urn-nbn-fi-csc-kata20170615175247247938}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Krizhevsky:2012}
 \BIBentryALTinterwordspacing
 A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
@@ -41,8 +47,11 @@ A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
   \url{http://dl.acm.org/citation.cfm?id=2999134.2999257}
 \BIBentrySTDinterwordspacing
 
-\bibitem{inception}
-C.~Szegedy, V.~Vanhoucke, S.~Ioffe, J.~Shlens, and Z.~Wojna, ``Rethinking the
-  inception architecture for computer vision,'' 06 2016.
+\bibitem{Bergstra}
+\BIBentryALTinterwordspacing
+J.~Bergstra and Y.~Bengio, ``Random search for hyper-parameter optimization,''
+  \emph{J. Mach. Learn. Res.}, vol.~13, no.~1, pp. 281--305, Feb. 2012.
+  [Online]. Available: \url{http://dl.acm.org/citation.cfm?id=2503308.2188395}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

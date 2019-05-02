@@ -1,12 +1,12 @@
-The FIN-Benthic \cite{finbenthic} dataset 2 are used in this paper. The dataset consists of 29 different classes of aquatic macroinvertebrates. The datset counts 11,588 images divided into training set (5830 images), validation set (2298 images) and test set (3460 images). 
+The FIN-Benthic \cite{finbenthic} dataset 2 are used in this paper. The dataset consists of 29 different classes of aquatic macroinvertebrates. 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{figures/bugs.png}
+    \includegraphics[width=0.35\textwidth]{figures/bugs.png}
     \caption{Example of aquatic macroinvertebrates}
 \end{figure}
 
-The training and validation set are annotated with class labels, whereas the test set are not. This paper is a part of a Kaggle [link ref] Challenge with the aim of getting the best classification score on the test set, that are evaluated on Kaggle. For the challenge feature vectors produced by an AlexNet\cite{Krizhevsky:2012} trained on the raw images. The features are the output of the last convolutional layer and flattened into a one-dimnesional vector with 4096 features. All images and vectors comes in pairs of images of the same bug taken form perpendicular angles, an attempt to take advantage of the systematic series the images are all images vertically stacked. If we have a pair of $x_1$ and $x_2$, then $x_1$ and $x_2$ are stacked as a combination of the two; 
+The datset counts 11,588 images divided into training set (5830 images), validation set (2298 images) and test set (3460 images). The training and validation set are annotated with class labels, whereas the test set are not. This paper is a part of a Kaggle\footnote{Kaggle is an online community of data scientists and machine learners. Red more: https://www.kaggle.com/getting-started/44916}Challenge with the aim of getting the best classification score on the test set, that are evaluated on Kaggle. For the challenge feature vectors produced by an AlexNet\cite{Krizhevsky:2012} trained on the raw images. The features are the output of the last convolutional layer and flattened into a one-dimnesional vector with 4096 features. All images and vectors comes in pairs of images of the same bug taken form perpendicular angles, an attempt to take advantage of the systematic series the images are all images vertically stacked. If we have a pair of $x_1$ and $x_2$, then $x_1$ and $x_2$ are stacked as a combination of the two; 
 
 $$x_1=\begin{bmatrix} x_{1} \\ x_{2} \\ \end{bmatrix}, x_2 = \begin{bmatrix} x_{2} \\ x_{1} \\ \end{bmatrix}$$
 

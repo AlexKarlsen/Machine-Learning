@@ -1,8 +1,8 @@
-Several experiments on this supervised learning challenge have been conducted using a variety of different techniques for classification are peformed on the two encoded datasets; FIN-Benthic and FIN-Benthic-concatenated. The classification methods are; k-Nearest Neighbors (kNN), Linear Discriminant Analysis (LDA), Support Vector Machines (SVM), Perceptron and Neural Networks (NN). Cross Validation (CV) are use for model selection to evaluate the best performing model. All the methods have been applied to the datasets on full dimensions and additionally with dimensionality reduction as a preprocessing step in the classification pipeline. Grid search have been used to search for good hyperparameters for all classifiers as well as dimensionality reduction techniques. Lastly existing Convolutional Neural Network architectures have been used on the raw images and using the promise of transfer learning to use a pretrained model to gain faster and better performing models on small datasets. For the transfer learning task the existing train, validation and test split have been used.
+Several experiments on this supervised learning challenge have been conducted using a variety of different techniques for classification are peformed on the two encoded datasets; FIN-Benthic and FIN-Benthic-concatenated. The classification methods are; k-Nearest Neighbors (kNN), Linear Discriminant Analysis (LDA), Support Vector Machines (SVM), Perceptron and Neural Networks (NN). Commonly for all these supervised learning algorithm is the need for training. Training an algorithm is an optimization process of a function and a loss criterion, that explains the goodness of the model as training progresses until convergence. Cross Validation (CV) are use for model selection to evaluate the best performing model. All the methods have been applied to the datasets on full dimensions and additionally with dimensionality reduction as a preprocessing step in the classification pipeline. Grid search have been used to search for good hyperparameters. Hyperparameters are user specified parameter to control the algorithms behaviour \cite{Goodfellow-et-al-2016}. Hyper parameter search have been applied for all classifiers. Furthermore the degree of dimensionality reduction have been investigated in the same manner. Lastly existing Convolutional Neural Network architectures have been used on the raw images and using the promise of transfer learning to use a pretrained model to gain faster and better performing models on small datasets. For the transfer learning task the existing train, validation and test split have been used.
 
 \paragraph{k-Nearest Neighbors (kNN)}
 
-K-Nearest Neighbor is a distance-based classifier and as the name implies, classifies to the most common occuring class of the k-nearest neighbors. There exist a variety of distance metrics, some example are; euclidean, minikowski, manhanobli and manhattan distance. 
+K-Nearest Neighbor is a distance-based classifier and as the name implies, classifies to the most common occuring class of the k-nearest neighbors \cite{karpathy}. There exist a variety of distance metrics, some example are; euclidean, minikowski and manhattan distance \cite{AIML}. 
 
 \begin{figure}[H]
     \centering
@@ -13,32 +13,33 @@ K-Nearest Neighbor is a distance-based classifier and as the name implies, class
 
 \paragraph{Linear Discrmininat Analysis (LDA)}
 
-Linear Discrmininat Analysis is a linear transformation of the data. The linear transformation is an optimization, that tries to maximize the distance between classes and minimize the distance within a class\todo{elaborate on decision boundary}. The classifier can also be used for dimensionality reduction, this would be further explained later.
+Linear Discrmininat Analysis is a linear transformation of the data. The linear transformation is an optimization, that tries to maximize the distance between classes and minimize the distance within a class\cite{AIML}. Figure \ref{fig:lda_dec} shows how LDA discriminates two classes.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{figures/lda_deci.png}
-    \caption[]{Credits: Tim Thatcher}
+    \caption[]{LDA creates a linear decision function. The linear decision function is a decision hyperplane, which discriminates classes. Credits: Tim Thatcher}
     \label{fig:lda_dec}
 \end{figure}
 
+LDA can also be used for dimensionality reduction, this would be further explained later.
+
 \paragraph{Support Vector Machine (SVM)}
 
-SVM can be used for classification. SVM tries to find the decision hyperplanes between the class and the rest of the data for \textit{"One-vs-Rest"} classification scheme using support vectors. 
-The margin between the classes can either be a hard-marign or a soft-margin. A hard-margin essentially means only the support vectors on the edge of the margin are used to define the decision hyperplane. A soft-margin on the hands defines a hinge loss function.\todo{elaborate on hinge loss and margin. essetially just svm might need some reading}
+SVM can be used for classification. SVM tries to find the decision hyperplanes, that maximizes th distance between classes \cite{IR}. The decision hyperplane are given by a linear function $w^Tx+b$, when the function is positive it predicts th class to be present, and intuitively the class is not present, when the function is negative \cite{Goodfellow-et-al-2016}. The Support Vector Machine uses support vectors to define the decision hyperplane. The support vectors are vectors of the training data, that maximizes the margin between to classes. The original SVM proposed by Boser et al. \cite{Boser} utilize a hard-margin. The hard-margin is the optimal decision hyperplane, however it only works well when the data is linearly seperable. Vapnik et al. \cite{Vapnik} proposed a soft-margin, which is more robust to noise by introducing some slack by introducing the hinge loss function.
 
-SVM can be used on data which is not linearly seperable by applying the kernel trick. The kernel...  
+One of the most promising contribution associated with SVMs is the kernel trick. The kernel trick makes not only SVM useful even when data is not linearly seperable, but all machine learning algorithms, that can be rewritten exclusively in terms of dot product between examples. The kernel trick is a mapping of the data into a higher dimensional space - even with indefinite dimensions. The kernel trick is equivalent to transforming all data points into higher dimensions, but with a lot less computational demands. In the high dimensional space a linear decision boundary can be obtained. One of the most widely used kernel is the gaussian kernel or radial basis function (RBF), which maps to an indefinite dimensional space \cite{Goodfellow-et-al-2016}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{figures/svm.png}
-    \caption[]{Credits: Avinash Navlani}
+    \caption[]{A binary SVM constructing the decision hyperplane, that maximizes the margin between the support vectors of the two classes. Credits: Avinash Navlani}
     \label{fig:svm}
 \end{figure}
 
 \paragraph{Perceptron}
 
-Perceptrons produces a linear decision function and only performs well on linearly seperable data. 
+Perceptrons is a single layer Neural Network. The perceptron was set forth by Frank RosenBlatt \cite{Perceptron}, as a way of mimicking human perception. Perceptrons produces a linear decision function and only performs well on linearly seperable data. 
 
 \begin{figure}[H]
     \centering
@@ -51,7 +52,7 @@ The perceptron are trained by iteratively updating the weights to produce the co
 
 \paragraph{Neural Network (NN)}
 
-Neural Networks extends the perceptron by adding a number of layers between the input and the output. These layers are referred to as hidden layers. The NN produces a non-linear decision function, thus overcomes the short comming of the perceptron.  
+Neural Networks extends the perceptron. This ideas was sparked by progress within biology mapping human cognition into a network of perceptrons i.e. neurons. The work working Aritifical Neural Network was completed by A. G. Ivakhnenko and V. G. Lapa \cite{Alexey}. The perceptrons where extended by adding more layers between input and output referred to as hidden layers. The NN produces non-linear decision functions, thus overcomes the short comming of the perceptron.  
 
 \begin{figure}[H]
     \centering
@@ -70,7 +71,7 @@ Dimensionality reduction as the name implies downscales the feature space into a
 
 \subparagraph{Principal Component Analysis (PCA)}
 
-PCA is a linear transformation onto a smaller feature space. The number of dimensions i.e. principal components are a hyperparameter. PCA is an unsupervised method, that tries to encapsulate as much as the variance as possible. The first component i.e. dimension is a projection a long the axis of the data with the variance, the second component is the axis with second most variance and so on, as the figure X shows.
+PCA is an unsupervised leraning technique. It learns an othogonal linear transformation onto a smaller feature space. The number of dimensions i.e. principal components are a hyperparameter. PCA tries to preserve as much as the information i.e. variance as possible. The first component i.e. dimension is a projection a long the axis of the data with the variance, the second component orthogoanl to the first axi. Th second compoent descirbes the axis with second most variance. The third the third most variance and so on, as the figure \ref{fig:pca} shows.
 
 \begin{figure}[H]
     \centering
@@ -104,11 +105,11 @@ Validation Holdout takes a fraction of your available labelled data and hold it 
     \label{fig:val_holdout}
 \end{figure}
 
-The assumption is, that the holdout set resembles the true data, and if the model performs well on both training and validation it is assumed to be a good model. The split is typically made 70/30 for training data and validation data respectively. 
+The assumption is, that the holdout set resembles the true data, since it has been drawn from the same distribution \cite{Goodfellow-et-al-2016}. If the model performs well on both training and validation it is assumed to be a good model. The split is typically made 70/30 for training data and validation data respectively. 
 
 \subparagraph{Cross Validation (CV)}
 
-Cross Validation extends on the holdout validation. $k$-fold Cross Validation create $k$ experiments compared to one. The entire data set are split in $k$ folds, for every $k$ step one subset is for validation and the remaining $k-1$ fold are used for training. Figure \ref{fig:cv} illustrates the idea. 
+Cross Validation extends on the holdout validation. $k$-fold Cross Validation create $k$ experiments compared to one. The entire data set are split in $k$ folds, for every $k$ step one subset is for validation and the remaining $k-1$ fold are used for training \cite{Goodfellow-et-al-2016}. Figure \ref{fig:cv} illustrates the idea. 
 
 \begin{figure}[H]
     \centering
@@ -128,7 +129,7 @@ Grid Search is an approach to seek better hyperparameters for your model. You sp
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{figures/gridsearch_vs_randomsearch.jpeg}
-    \caption[]{Grid search is a systematic approach to explore a broader space of hyperparameter although at the cost of additional time. The down-side of this approch is, that it is still based on intuition of good hyperparameters. The random approach are also widely used and might be preffered, as it may find a sweet spot, that goes beyond human intuition, however that is no guarantee and it is still time costly \cite{Bergstra}. Credits: Bergstra and Bengio}
+    \caption[]{Grid search is a systematic approach to explore a broader space of hyperparameters although at the cost of additional time. The down-side of this approch is, that it is still based on intuition of good hyperparameters. The random approach are also widely used and might be preffered, as it may find a sweet spot, that goes beyond human intuition, however that is no guarantee, and it is still time costly \cite{Bergstra}. Credits: Bergstra and Bengio}
     \label{fig:gs_vs_rs}
 \end{figure}
 
